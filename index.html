@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport"content="width-device-width,
+  initial-scale=1.0"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TEEAD SOLAR PANEL SOLUTIONS</title>
+  <style>
+  :root {
+    --bg: #f0f0f0;
+    --text: #222;
+    --card: #ffffff;
+    --accent: #007B55;
+    --hover: #005b3f;
+  }
+  body.dark-mode {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --card: #1e1e1e;
+    --accent: #4caf50;
+    --hover: #388e3c;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* Optional: style your sections with variables */
+  .card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+  }
+
+  a {
+    color: var(--accent);
+  }
+  a:hover {
+    color: var(--hover);
+  }
+</style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<button class="dark-toggle" onclick="toggleMode()">Toggle Theme</button>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+  }
+
+  // On page load, keep user's preference
+  window.onload = () => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") document.body.classList.add("dark-mode");
+  };
+</script>
+
+
+  <!-- main container -->
+
+  <main class="main-container">
+    <div class="page1">
+      <div class="frame">
+
+        <!-- Header -->
+
+        <header>
+          <nav class="nav-bar">
+            <img class="rose-logo" src="./images/rose-logo.png" alt="logo">
+            <h1 class="brand-header">
+              <a href="index.html">TEEAD SOLAR PANEL SOLUTIONS</a>
+            </h1>
+            <ul class="menu">
+              <li><a href="product.html">Products</a></li>
+              <li><a href="catalogue.html">Panels Catalogue</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+              <div class="icon-btn menu-btn">
+                <a href="">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="icon-btn like-btn">
+                <a href="">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="icon-btn cart-btn">
+                <a href="">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </header  >
+
+        <!-- main image container -->
+
+        <div class="main-img-container position-absolute">
+          <img class="main-img" src="./images/solar-panels-carousel-04-desktop.png" alt="">
+        </div>
+        <div class="main-text">
+          <h2 class="caption">UNLEASH THE POWER OF THE SUN</h2>
+          <h3 class="sub-caption">YOUR AVAILABLE SOLAR PANEL SHOP OPEN 24/7</h3>
+          <div class="order-btn">
+            <a href="catalogue.html">ORDER INQUIRY</a>
+          </div>
+          <div>
+            <span class="phone">+254 704 586 660</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  best offers  section-->
+
+    <div class="frame">
+      <section class="best-offers">
+        <div class="best-offers-bar">
+          <h3 class="title">Best offers</h3>
+          <div class="arrows">
+            <a href="">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
+            &nbsp;
+            <a href="">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="offers">
+          <div class="left-offer offer">
+            <div class="left-offer-info">
+              <span class="name-price">157 mm 360w monocrystalline</span>
+              <span>KSh 10,082 <a href=""><i class="fa fa-shopping-cart purple-cart" aria-hidden="true"></i></a> 
+              </span>
+              <div class="discount">-50%</div>
+            </div>
+            <div class="left-offer-img-frame">
+              <img src="./images/157 mm 360w monocrystalline.png" alt="monocrystalline">
+            </div>
+          </div>
+          <div class="offers-right">
+            <div class="upper-right-offer right-offer offer">
+              <div class="right-offer-info">
+                <div>
+                  <span class="name-price">Canadian Solar</span>
+                  <span>KSh 13,400 <a href=""><i class="fa fa-shopping-cart purple-cart" aria-hidden="true"></i></a></span>
+                </div>
+              </div>
+              <div class="right-offer-img-frame">
+                <img src="./images/eagle 66TR | 375W|100V.png" alt="eagle">
+              </div>
+            </div>
+            <div class="lower-right-offer right-offer offer">
+              <div class="right-offer-info">
+                <div>
+                  <span class="name-price">Longi</span>
+                  <span>KSh 13,400 <a href=""><i class="fa fa-shopping-cart purple-cart" aria-hidden="true"></i></a></span>
+                </div>
+              </div>
+              <div class="right-offer-img-frame">
+                <img src="./images/DUOMAX TWIN SERIES 405 W.png" alt="duomax twin series">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+  <!-- product sample section -->
+
+    <section class="product-samples-section">
+      <div class="product-samples-header">
+        <h3 class="title">Product samples</h3>
+      </div>
+      <div class="samples-box">
+        <div class="product1 product">
+          <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/Renogy Solar Panel 200W 12V Lightweight Monocrystalline Ultra-Flexible Bendable.png" alt="Renogy Solar Panel">
+            </a>
+          </div>
+          <span>Renogy Solar PaneL</span>
+          <form class="quantity">
+            <input type="radio" id="q1" name="quantity1" checked><label for="q1">200W</label>
+            <input type="radio" id="q2" name="quantity1"><label for="q2">12 V.</label>
+            <input type="radio" id="q3" name="quantity1"><label for="q3">Bendable.</label>
+          </form>
+          <span class="price-span">Ksh9500 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="product2 product">
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/113141-Jinko-Solar-Tiger-Neo-N-Typ-54HL4-V-415-W-monokristallin-1_600x600.png" alt="Jinko-Solar-Tiger">
+            </a>
+          </div>
+          <span>Jinko Solar</span>
+          <form class="quantity">
+            <input type="radio" id="q4" name="quantity2" checked><label for="q4">415W.</label>
+            <input type="radio" id="q5" name="quantity2"><label for="q5">54HL 4V.</label>
+            <input type="radio" id="q6" name="quantity2"><label for="q6">Tiger-Neo-N-Typ-54HL.</label>
+          </form>     
+          <span class="price-span">KSh 16,400<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="product3 product">
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/157 mm 360w monocrystalline.png" alt="monocrystalline">
+            </a>
+          </div>
+          <span>BougeRV</span>
+          <form class="quantity">
+            <input type="radio" id="q7" name="quantity" checked><label for="q7">200W.</label>
+            <input type="radio" id="q8" name="quantity"><label for="q8">30A mm.</label>
+            <input type="radio" id="q9" name="quantity"><label for="q9">Monocrystalline.</label>
+          </form>
+          <span class="price-span">Ksh9500 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="product4 product">
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/AIKO-A470-MAH54Mw- FRONT AND BACK PANEL.png" alt="aiko">
+            </a>
+          </div>
+          <span>AIKO </span>
+          <form class="quantity">
+            <input type="radio" id="q10" name="quantity" checked><label for="q10">54 Mh.</label>
+            <input type="radio" id="q11" name="quantity"><label for="q11">A470.</label>
+            <input type="radio" id="q12" name="quantity"><label for="q12">front and back panel.</label>
+          </form>
+          <span class="price-span">Ksh 10,000 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="product5 product">
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/DUOMAX TWIN SERIES 405 W.png" alt="duomax">
+            </a>
+          </div>
+          <span>DUOMAX TWIN SERIES</span>
+          <form class="quantity">
+            <input type="radio" id="q13" name="quantity" checked><label for="q13">405W.</label>
+            <input type="radio" id="q14" name="quantity"><label for="q14">18.8% eff.</label>
+            <input type="radio" id="q15" name="quantity"><label for="q15">monocrystalline.</label>
+          </form>
+          <span class="price-span">Ksh 16,000 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="product6 product">
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/winaico-wst-ngx-d3.png" alt="winaico">
+            </a>
+          </div>
+          <span>WINIACO WST-NGX-D3</span>
+          <form class="quantity">
+            <input type="radio" id="q16" name="quantity" checked><label for="q16">450W.</label>
+            <input type="radio" id="q17" name="quantity"><label for="q17">23% eff.</label>
+            <input type="radio" id="q18" name="quantity"><label for="q18">mid power.</label>
+          </form>
+          <span class="price-span">Ksh 16,000 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+      </div>
+      <div class="show-more-btn">Show more</div>
+    </section>
+
+  <!-- testimonials section  -->
+
+    <section class="testimonials">
+      <div class="testimonials-bar">
+        <h3 class="title">REAL WORLD FACTS ABOUT SOLAR</h3>
+        <div class="gallery-arrows">
+          <a href="">
+            <i class="fa fa-angle-left" aria-hidden="tru"></i>
+          </a>
+          &nbsp;
+          <a href="">
+            <i class="fa fa-angle-right" aria-hidden="tru"></i>
+          </a>
+        </div>
+      </div>
+      <div class="testimonials-box">
+        <div class="customer1 customer">
+          <div class="customer-info inner-box">
+            <div class="photo-container">
+              <img src="./images/monocrystalline-solar-panel.png" alt="monocrystalline">
+            </div>
+            <span>Advantages of solar energy</span> 
+            <span class="customer-description">"Harness the power of the sun"</span>
+            <i class="fa fa-vk" aria-hidden="true"></i>
+            &nbsp;
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </div> 
+          <div class="testimonial-text inner-box">
+            "IOf all green jobs, solar energy creates the most employment opportunities for developers, builders, installers and maintenance technicians at the power plants. Taking full advantage of solar brings new impetus to the economy and offers families, businesses and even nations an investment opportunity. According to a recent study published in Science Direct, “Job creation during the global energy transition to 100% renewable power systems by 2050”, the number of jobs in the photovoltaic sector alone will reach 22 million worldwide by 2050 (in 2019 there were 3.8 million, according to estimates by IRENA, the international agency for renewable energy."
+          </div>
+        </div>
+        <div class="customer2 customer">
+          <div class="customer-info inner-box">
+            <div class="photo-container">
+              <img src="./images/solar.png" alt="solar">
+            </div>
+            <span>Technological versatility</span> 
+            <span class="customer-description">"Durable,reliable and sustainable"</span>
+            <i class="fa fa-vk" aria-hidden="true"></i>
+            &nbsp;
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </div> 
+          <div class="testimonial-text inner-box">
+            "Photovoltaics produces energy mainly in the middle part of the day, but thanks to larger, more efficient and reliable storage systems, we’re better able to manage the discrepancy between energy demand and what the sun provides naturally. Although there may be differences from country to country, generally speaking, solar energy, particularly where photovoltaic technology is used to generate it, can be transferred directly to the electricity grid. This makes things like energy communities possible and allows private individuals and businesses to send the excess energy they produce to the market, guaranteeing them not only savings but also a source of income. There is an important social advantage as well, because that energy becomes immediately available to populations in areas of the world that previously didn’t have access to traditional electrical networks, such as in Africa."
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+          <div class="ball1 ball"></div>
+          <div class="ball2 ball"></div>
+          <div class="ball3 ball"></div>
+          <div class="ball4 ball"></div>
+          <div class="ball5 ball"></div>
+        </div>
+    </section>
+
+  <!-- footer section -->
+
+    <footer>
+      <table>
+      <tr>
+       <td><img src="./images/map.png" alt="map"></td>
+       <td style="width: 5000px;"></td>
+       <td><img src="./images/map2.png"alt="map2"></td>
+      </tr>
+      </table>
+      <nav class="footer-bar">
+        <div class="subscribe-btn">
+            <span>CALL OR WHATSAPP US NOW</span>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+        <div class="address footer-block">
+          <span>LOCATION:TRUST MANSION KOINANGE STREET 2ND FLOOR</span>
+          <!-- <span class="divider">|</span> -->
+          <span>+254 704 586 660</span>
+          <!-- <span class="divider">|</span> -->
+          <span>info@teead.com</span>
+          <span>sales@teead.com</span>
+          <span>tech@teed.com</span>
+        </div>
+        <div class="other-links footer-block">
+          <a href="https://teadsolarpanels.lovable.app/">Shipping return</a>
+          <a href="https://teadsolarpanels.lovable.app/">Info about us</a>
+          <a href="https://teadsolarpanels.lovable.app/">Discounts</a>        </div>
+        <div class="copyright footer-block">
+          <span>2025 Copyright information for this work <@terminal></span>
+          <div class="card-logos">
+            <div class="card-logo">
+              <img src="./images/mastercard.png" alt="Mastercard">
+            </div>
+            <div class="card-logo card-logo2">
+              <img src="./images/visa.png" alt="Visa">
+            </div>
+            <div class="card-logo card-logo3">
+              <img src="./images/paypal.png" alt="Paypal">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </footer>
+  </main>
+</body>
+</html>

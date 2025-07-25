@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Solar online shop- Product page</title>
+  <style>
+  :root {
+    --bg: #f0f0f0;
+    --text: #222;
+    --card: #ffffff;
+    --accent: #007B55;
+    --hover: #005b3f;
+  }
+  body.dark-mode {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --card: #1e1e1e;
+    --accent: #4caf50;
+    --hover: #388e3c;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* Optional: style your sections with variables */
+  .card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+  }
+
+  a {
+    color: var(--accent);
+  }
+  a:hover {
+    color: var(--hover);
+  }
+</style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/product.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<button class="dark-toggle" onclick="toggleMode()">Toggle Theme</button>
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+  }
+
+  // On page load, keep user's preference
+  window.onload = () => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") document.body.classList.add("dark-mode");
+  };
+</script>
+
+
+  <!-- header of the page-->
+  
+  <header>
+    <nav class="nav-bar">
+      <img src="./images/rose-logo.png" alt="logo">
+      <span><a class="title" href="index.html">TEEAD SOLAR PANEL SOLUTIONS</a></span>
+      <ul class="menu">
+        <li><a href="index.html#crafts-gallery">Products</a> </li>
+        <li><a href="catalogue.html"> Catalogue</a> </li>
+        <li><a href="contact.html">Contact</a> </li>
+      </ul>
+      <div class="icons">
+        <div class="icon-btn menu-btn">
+          <a href="">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="icon-btn like-btn">
+          <a href="">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="icon-btn cart-btn">
+          <a href="">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main container -->
+
+  <main class="main-container">
+    <div class="selected-product">
+      <div class="product-img">
+        <div class="upper-elements">
+          <div class="pagination">
+            <div class="ball ball1"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+          </div>
+          <div class="discount">
+            -50%
+          </div>
+        </div>
+        <div class="lower-elements">
+          <div class="arrows">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </div>
+          <span>“I did a 3 KVA system…Panels and batteries cost me 285 k from Chloride. Total cost was about 390 K for everything.” — Supports 4‑bedroom house, lights, fridge, TV.</span>
+        </div>
+        <div class="main-img-frame">
+          <img src="./images/aesthetic-home-with-solar-panels-9lueihky0e5t8rr5.png" alt="trjar">
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-title line">
+          <h1>Jinko Solar</h1>
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        </div>
+        <div class="size line">Size:</div>
+        <div class="size-options line">
+          <div class="option-size option-size1">415W.</div>
+          <div class="option-size">54HL 4V.</div>
+          <div class="option-size">Tiger-Neo-N-Typ-54HL.</div>
+          <div class="option-size">YOURE WELCOME.</div>
+        </div>
+        <div class="other-options line">
+          <div class="color-picker">
+            <span>Color:</span>
+            <div class="balls">
+              <div class="color-ball color-ball1"></div>
+              <div class="color-ball color-ball2"></div>
+              <div class="color-ball color-ball3"></div>
+              <div class="color-ball color-ball4"></div>
+            </div>
+          </div>
+          <div class="delivery">
+            <span>No matter where you are:</span>
+            <div class="delivery-options">
+              <div class="options-line">
+                <div class="checkmark1 checkmark"></div>
+                <div class="delivery-option">Rural</div>
+                <div class="checkmark2 checkmark"></div>
+                <div class="delivery-option">Urban</div>
+              </div>
+          </div>
+        </div>
+        </div>
+        <div class="total line">
+          <span class="old-price"></span>
+          <span class="new-price">KSh 16,400</span>
+          <div class="buy-btn">Buy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- related products section -->
+
+    <div class="related-products">
+      <nav class="related-products-bar">
+        <h2 class="title">Related products</h2>
+        <div class="related-arrows">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          &nbsp;
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+      </nav>
+      <div class="related-box">
+        <div class="related1 related">
+          <a href=""><i class="fa fa-heart-o like" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/Renogy Solar Panel 200W 12V Lightweight Monocrystalline Ultra-Flexible Bendable.png" alt="Renogy Solar">
+            </a>
+          </div>
+          <span>Renogy Solar PaneL</span>
+          <form class="quantity">
+            <input type="radio" id="q1" name="quantity1" checked><label for="q1">200W.</label>
+            <input type="radio" id="q2" name="quantity1"><label for="q2">12 V.</label>
+            <input type="radio" id="q3" name="quantity1"><label for="q3">Bendable.</label>
+          </form>
+          <span class="price-span">Ksh9500 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="related2 related">
+          <a href=""><i class="fa fa-heart-o like" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/157 mm 360w monocrystalline.png" alt="Renogy Solar Panel" alt="Monocrystalline">
+            </a>
+          </div>
+          <span>BougeRV</span>
+          <form class="quantity">
+            <input type="radio" id="q4" name="quantity2" checked><label for="q4">200W.</label>
+            <input type="radio" id="q5" name="quantity2"><label for="q5">30A mm.</label>
+            <input type="radio" id="q6" name="quantity2"><label for="q6">Monocrystalline.</label>
+          </form>     
+          <span class="price-span">Ksh9500 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+        <div class="related3 related">
+          <a href=""><i class="fa fa-heart-o like" aria-hidden="true"></i></a>
+          <div class="img-frame">
+            <a href="product.html">
+              <img src="./images/Risen Energy - Model: Risen Titan 550W.png" alt="Assorted Colors">
+            </a>
+          </div>
+          <span>WINIACO WST-NGX-D3</span>
+          <form class="quantity">
+            <input type="radio" id="q7" name="quantity" checked><label for="q7">450W.</label>
+            <input type="radio" id="q8" name="quantity"><label for="q8">23% eff.</label>
+            <input type="radio" id="q9" name="quantity"><label for="q9">mid power.</label>
+          </form>
+          <span class="price-span">Ksh 16,000 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

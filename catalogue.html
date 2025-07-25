@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SOLAR PANELS - catalogue</title>
+  <style>
+  :root {
+    --bg: #f0f0f0;
+    --text: #222;
+    --card: #ffffff;
+    --accent: #007B55;
+    --hover: #005b3f;
+  }
+  body.dark-mode {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --card: #1e1e1e;
+    --accent: #4caf50;
+    --hover: #388e3c;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* Optional: style your sections with variables */
+  .card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+  }
+
+  a {
+    color: var(--accent);
+  }
+  a:hover {
+    color: var(--hover);
+  }
+</style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/catalogue.css">
+</head>
+<body>
+<button class="dark-toggle" onclick="toggleMode()">Toggle Theme</button>
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+  }
+
+  // On page load, keep user's preference
+  window.onload = () => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") document.body.classList.add("dark-mode");
+  };
+</script>
+
+<main class="main-container">
+<header>
+  <nav class="nav-bar">
+    <img class="rose-logo" src="./images/rose-logo.png" alt="logo">
+    <h1 class="brand-header">
+      <a class="title" href="index.html">TEEAD SOLAR PANEL SOLUTIONS</a>
+    </h1>
+    <ul class="menu">
+      <li><a href="index.html#crafts-gallery">Crafts Gallery</a></li>
+      <li><a href="catalogue.html">SOLAR PANELS Catalogue</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="icons">
+      <div class="icon-btn menu-btn">
+        <a href="">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="icon-btn like-btn">
+        <a href="">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="icon-btn cart-btn">
+        <a href="">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header  >
+<section class="flowers-catalogue">
+  <h1 class="page-header title">Catalogue</h1>
+  <div class="funnel">
+    <span><i class="fa fa-filter" aria-hidden="true"></i> Filters</span>
+  </div>
+  <div class="main-box">
+    <div class="filter-box">
+      <span>Price</span>
+      <div class="price-slider-frame">
+        <img src="images/solar-panel-close-up-001,ar_2.0,w_1152,h_576,.png" alt="solar-panel">
+      </div>
+      <div class="price-limits">
+        <div class="min-price-limit limit">39</div>
+        <div class="max-price-limit limit">89</div>
+      </div>
+      <div class="spacer"></div>
+      <span>Color</span>
+      <div class="color-picker">
+        <div class="color-container">
+          <div class="color1 color"><i class="fa fa-check" aria-hidden="true"></i></div>
+        </div>
+        <div class="color-container">
+          <div class="color2 color">&nbsp;</div>
+        </div>
+        <div class="color-container">
+          <div class="color3 color">&nbsp;</div>
+        </div>
+        <div class="color-container">
+          <div class="color4 color">&nbsp;</div>
+        </div>
+        <div class="color-container">
+          <div class="color5 color">&nbsp;</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <span>Our Panels are;</span>
+      <div class="event1 event">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>High efficient</span>
+      </div>
+      <div class="event">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Durable and long lasting</span>
+      </div>
+      <div class="event">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Sustainable energy solution</span>
+      </div>
+      <div class="event">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Reliable perfomance</span>
+      </div>
+      <div class="event">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Long lasting</span>
+      </div>
+      <div class="spacer"></div>
+      <span>Features and benefits</span>
+      <div class="for-whom">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Monocrystalline for optimal performance</span>
+      </div>
+      <div class="for-whom">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Industry leading warranties and support</span>
+      </div>
+      <div class="for-whom">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Easy installation and maintainance</span>
+      </div>
+      <div class="for-whom for-whom1">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Compactible with existing energy systems</span>
+      </div>
+      <div class="for-whom">
+        <div class="checkmark"><i class="fa fa-check" aria-hidden="true"></i></div>
+        <span>Optimal perfamance tracking</span>
+      </div>
+      <div class="show-btn">Shine a light On savings</div>
+    </div>
+    <div class="results-box">
+      <div class="result1 result">
+        <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <div class="img-frame">
+          <a href="product.html">
+            <img src="images/Risen Energy - Model: Risen Titan 550W.png" alt="Risen Energy">
+          </a>
+        </div>
+        <span>RenePV  </span>
+        <form class="quantity">
+          <input type="radio" id="q1" name="quantity1" checked><label for="q1">380 W.</label>
+          <input type="radio" id="q2" name="quantity1"><label for="q2">- Vmp: ~42V.</label>
+          <input type="radio" id="q3" name="quantity1"><label for="q3">- Voc: ~50V.</label>
+        </form>
+        <span class="price-span">Ksh 18,000 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+      </div>
+      <div class="result2 result">
+        <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <div class="img-frame">
+          <a href="product.html">
+            <img src="images/Canadian Solar - Model: HiKu6 450W.png" alt="Canadian Solar">
+          </a>
+        </div>
+        <span>Canadian Solar</span>
+        <form class="quantity">
+          <input type="radio" id="q4" name="quantity2" checked><label for="q4">- 450W.</label>
+          <input type="radio" id="q5" name="quantity2"><label for="q5">Voltage (Vmp): ~41.5V.</label>
+          <input type="radio" id="q6" name="quantity2"><label for="q6">Voc: ~49.5V.</label>
+        </form>     
+        <span class="price-span">Ksh 13,400 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+      </div>
+      <div class="result3 result">
+        <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <div class="img-frame">
+          <a href="product.html">
+            <img src="images/Trina Solar - Model: Trina Vertex S 410W..png" alt="Trina Solar">
+          </a>
+        </div>
+        <span>Trina Solar </span>
+        <form class="quantity">
+          <input type="radio" id="q7" name="quantity" checked><label for="q7">410W.</label>
+          <input type="radio" id="q8" name="quantity"><label for="q8">- Vmp: ~34V.</label>
+          <input type="radio" id="q9" name="quantity"><label for="q9">Voc: ~40.5V.</label>
+        </form>
+        <span class="price-span">KSh 11,160  <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+      </div>
+      <div class="result4 result">
+        <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <div class="img-frame">
+          <a href="product.html">
+            <img src="images/eagle 66TR | 375W|100V.png" alt="eagle 66TR">
+          </a>
+        </div>
+        <span>350 W mono module</span>
+        <form class="quantity">
+          <input type="radio" id="q10" name="quantity" checked><label for="q10">350 W.</label>
+          <input type="radio" id="q11" name="quantity"><label for="q11"> Voltage (Vmp): ~41V.</label>
+          <input type="radio" id="q12" name="quantity"><label for="q12">(Voc): ~49V.</label>
+        </form>
+        <span class="price-span">Ksh 18,000 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+      </div>
+      <div class="result5 result">
+        <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <div class="img-frame">
+          <a href="product.html">
+            <img src="images/DUOMAX TWIN SERIES 405 W.png" alt="DUOMAX TWIN SERIES">
+          </a>
+        </div>
+        <span>200 W mono</span>
+        <form class="quantity">
+          <input type="radio" id="q13" name="quantity" checked><label for="q13">405 W.</label>
+          <input type="radio" id="q14" name="quantity"><label for="q14">1500V .</label>
+          <input type="radio" id="q15" name="quantity"><label for="q15">TSM-DEG15HC.20.</label>
+        </form>
+        <span class="price-span">Ksh 18,000<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+      </div>
+      <div class="result6 result">
+        <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <div class="img-frame">
+          <a href="product.html">
+            <img src="images/113141-Jinko-Solar-Tiger-Neo-N-Typ-54HL4-V-415-W-monokristallin-1_600x600.png" alt="113141-Jinko-Solar">
+          </a>
+        </div>
+        <span>Jinko Solar</span>
+        <form class="quantity">
+          <input type="radio" id="q16" name="quantity" checked><label for="q16">570W.</label>
+          <input type="radio" id="q17" name="quantity"><label for="q17">1500V.</label>
+          <input type="radio" id="q18" name="quantity"><label for="q18">(Voc): ~49V.</label>
+        </form>
+        <span class="price-span">KSh 16,400 <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></span>
+      </div>
+    </div>
+  </div>
+  <div class="pagination">
+    <div class="ball ball1"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+</section>
+</main> 
+</body>
+</html>
